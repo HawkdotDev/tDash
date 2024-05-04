@@ -20,7 +20,7 @@ function App() {
   const textColor = IsLight ? darkText : lightText;
   const owl = IsLight ? owlW : owlB;
 
-  const dashboardName = "Dashboard";
+  const dashboardName = "tDash";
 
   return (
     <>

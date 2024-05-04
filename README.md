@@ -1,3 +1,3 @@
 # tDash
 
-- Currently does not support mobile devices
+- Currently does not support mobile and tablet devices
