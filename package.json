@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hawkdotdev.github.io/tinyDashboard/",
-  "name": "tinydashboard",
+  "homepage": "https://hawkdotdev.github.io/tDash/",
+  "name": "tdash",
   "private": true,
   "version": "0.0.0",
   "type": "module",
