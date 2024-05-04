@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: DomaineDispCond;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "DomaineDispCond";
+  src: local("DomaineDispCond"),
+    url("./assets/fonts/DomaineDispCondMedium.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+#scroller{
+  padding-top: 18px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow-x: auto;
+
+}
+#scroller::-webkit-scrollbar{
+  display: none;
+}
+#scroller h1{
+  font-family: domain;
+  font-weight: 100;
+  font-size: 60px;
+  display: inline-block;
+  /* color: #222; */
+  margin-right: 10px; 
+  animation-name: move;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#scroller:hover h1{
+  animation-play-state: paused;
+}
+#scroller h1 span{
+  font-family: domain;
+  padding: 0 5px;
+  font-weight: 100;
+}
+
+@keyframes move {
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(-100% - 14px));
+  }
+}
