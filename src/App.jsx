@@ -16,9 +16,11 @@ function App() {
   const darkBG = "#333333";
   const darkText = "#c4bcb2";
 
-  const bgColor = IsLight ? lightBG : darkBG;
-  const textColor = IsLight ? lightText : darkText;
-  const owl = IsLight ? owlB : owlW;
+  const bgColor = IsLight ? darkBG : lightBG;
+  const textColor = IsLight ? darkText : lightText;
+  const owl = IsLight ? owlW : owlB;
+
+  const dashboardName = "Dashboard";
 
   return (
     <>
@@ -27,32 +29,48 @@ function App() {
           backgroundColor: bgColor,
           color: textColor,
         }}
-        className="w-screen h-screen text-lg"
+        className="w-screen h-screen text-lg flex"
       >
         <nav
           style={{
             borderColor: textColor,
           }}
-          className="w-screen relative flex px-3 border-b"
+          className="h-screen w-[15%] flex p-2 border-r"
         >
-          <img src={owl} alt="logo" className="w-[30px] mx-2" />
-          <div className="w-full bg-transparent p-2 flex justify-center text-3xl">
-            TinyDashboard
-          </div>
-          <button
-            className="w-[35px] h-[35px] m-2 px-[1px] rounded-lg"
-            onClick={() => {
-              setIsLight(!IsLight);
-              IsLight ? console.log("moon") : console.log("sun");
-            }}
-          >
+          <div className="w-full h-8 flex items-center justify-start">
             <img
-              src={IsLight ? moon : sun}
+              style={{
+                borderColor: textColor,
+              }}
+              src={owl}
               alt="logo"
-              className="w-full h-full rounded-full"
+              className="w-[40px] py-3 px-[2px]"
             />
-          </button>
+            <h1 className="bg-transparent text-2xl px-2">{dashboardName}</h1>
+          </div>
         </nav>
+
+        <section
+          style={{
+            borderColor: textColor,
+          }}
+          className="h-screen w-[85%] flex p-2 border-b"
+        >
+          <div className="flex justify-end w-full">
+            <button
+              className="w-[35px] h-[35px] px-[1px] rounded-full"
+              onClick={() => {
+                setIsLight(!IsLight);
+              }}
+            >
+              <img
+                src={IsLight ? sun : moon}
+                alt="logo"
+                className="w-full h-full rounded-full"
+              />
+            </button>
+          </div>
+        </section>
       </main>
     </>
   );
