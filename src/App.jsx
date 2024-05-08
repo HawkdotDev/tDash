@@ -2,6 +2,7 @@
 import moon from "./assets/icons/moon.svg";
 import sun from "./assets/icons/sun.svg";
 import owlB from "./assets/icons/owl-b.svg";
+import arrow from "./assets/icons/arrowRight.svg";
 import owlW from "./assets/icons/owl-w.svg";
 import { useState } from "react";
 
@@ -24,67 +25,112 @@ function App() {
 
   return (
     <>
-      <main
-        style={{
-          backgroundColor: bgColor,
-          color: textColor,
-        }}
-        className="w-screen h-screen text-lg flex"
-      >
-        <nav
-          style={{
-            borderColor: textColor,
-          }}
-          className="h-screen w-[15%] flex flex-col justify-between p-1 border-r"
-        >
-          <div className="w-full flex items-center justify-start mt-[2px]">
-            <img
-              style={{
-                borderColor: textColor,
-              }}
-              src={owl}
-              alt="logo"
-              className="w-[30px] py-1 px-[2px]"
-            />
-            <h1 className="bg-transparent text-2xl px-2">{dashboardName}</h1>
-          </div>
-          <div className="w-full h-[86%] rounded-md flex flex-col items-center justify-between overflow-hidden">
-            <div className="flex flex-col w-full">
-              <h1 className="hover:bg-black w-full rounded-md p-2">lund</h1>
-              <h1 className="hover:bg-black w-full rounded-md p-2">lund</h1>
-              <h1 className="hover:bg-black w-full rounded-md p-2">lund</h1>
-              <h1 className="hover:bg-black w-full rounded-md p-2">lund</h1>
-            </div>
-            <div className="flex flex-col w-full p-2 rounded-md bg-red-400">
-              laura
-            </div>
-          </div>
-          <div className="w-full h-[7%] p-2 bg-blue-500 rounded-md flex items-center justify-start">
-            something
-          </div>
-        </nav>
-
-        <section
-          style={{
-            borderColor: textColor,
-          }}
-          className="h-screen w-[85%] flex p-2 border-b"
-        >
-          <div className="flex justify-end w-full">
+      <main className="w-screen h-screen bg-slate-300 flex">
+        <nav className="bg-black p-[6px] flex flex-col justify-between h-full w-20 border-l border-white">
+          <div className="flex flex-col justify-between h-[65%]">
+          <div className="w-full flex justify-between">
             <button
-              className="w-[35px] h-[35px] px-[1px] rounded-full"
               onClick={() => {
-                setIsLight(!IsLight);
+                alert("laura");
               }}
             >
               <img
-                src={IsLight ? sun : moon}
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
                 alt="logo"
-                className="w-full h-full rounded-full"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+            <button className="w-[50%] ml-1 h-full hover:border-[1px] border-white rounded-sm">
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={arrow}
+                alt="logo"
+                className="w-full"
               />
             </button>
           </div>
-        </section>
+          <div className="h-[85%] flex flex-col justify-evenly items-center">
+            <button
+              onClick={() => {
+                alert("laura");
+              }}
+            >
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
+                alt="logo"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+            <button
+              onClick={() => {
+                alert("laura");
+              }}
+            >
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
+                alt="logo"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+            <button
+              onClick={() => {
+                alert("laura");
+              }}
+            >
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
+                alt="logo"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+            <button
+              onClick={() => {
+                alert("laura");
+              }}
+            >
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
+                alt="logo"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+          </div>
+          </div>
+          <div className="bg-blue-300 text-center">
+            <button
+              onClick={() => {
+                alert("laura");
+              }}
+            >
+              <img
+                style={{
+                  borderColor: textColor,
+                }}
+                src={owl}
+                alt="logo"
+                className="w-12 p-1 px-[2px]"
+              />
+            </button>
+          </div>
+        </nav>
+        <aside className="w-full h-full bg-slate-500 p-2">laura</aside>
       </main>
     </>
   );
